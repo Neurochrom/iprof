@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\test.cpp" />
+    <ClCompile Include="..\iprof.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\hitime.hpp" />
+    <ClInclude Include="..\iprof.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md" />
+  </ItemGroup>
+</Project>
