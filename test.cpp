@@ -38,7 +38,7 @@ double hugePower()
       IPROF("SecondPowerLoop");
       for (int i = 0; i < 5000; ++i)
       {
-         double exp = double(((i & 8) + 1) >> 3);
+         double exp = double(i & 15) * 0.08;
          ret = pow(ret * 1.4, exp);
       }
    }
@@ -68,9 +68,12 @@ double heavyCalc()
 
 int main()
 {
+   auto startTime = HighResClock::now();
+
    cout << "Hi ;)\n" << endl;
 
-   cout << "sizeof(InternalProfiler::Tree): " << sizeof(InternalProfiler::Tree) << endl;
+   cout << "sizeof(InternalProfiler::Tree): " << sizeof(InternalProfiler::Tree)
+        << " bytes" << endl;
 
    cout << "\nAnd the lucky double is: " << heavyCalc() << endl;
 
@@ -110,6 +113,7 @@ int main()
    cout << "iprof multithread disabled\n" << endl;
 #endif
 
-   cout << "Goodbye" << endl;
+   cout << "The test took " << MILLI_SECS(HighResClock::now() - startTime)
+        << " milliseconds\nGoodbye" << endl;
    return 0;
 }

@@ -41,3 +41,5 @@ typedef std::chrono::high_resolution_clock HighResClock;
 #endif
 
 #define MICRO_SECS(x) std::chrono::duration_cast<std::chrono::microseconds>(x).count()
+#define MILLI_SECS(x) std::chrono::duration_cast<std::chrono::milliseconds>(x).count()
+#define SECS(x) std::chrono::duration_cast<std::chrono::seconds>(x).count()
