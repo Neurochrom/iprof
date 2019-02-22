@@ -1,4 +1,4 @@
-// Copyright (c) 2015-2019 Paweł Cichockii
+// Copyright (c) 2015-2019 Paweł Cichocki
 // License: https://opensource.org/licenses/MIT
 
 #pragma once
