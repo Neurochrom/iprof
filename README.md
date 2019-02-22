@@ -1,7 +1,7 @@
 ﻿# iprof - a pretty simple and performant C++ profiling library
 
 The iprof library let's you measure the performance of your C++ code in real time with little overhead,
-both in developer- and run-time. The name is derived from InternalProfiler.
+both in developer- and run-time. The name is a derivative of **I**nternal**Prof**iler.
 
 ## Usage
 
@@ -94,12 +94,12 @@ A sample is provided in test.cpp.
 To build the sample on unixish systems:
 
 ```bash
-clang++ -std=c++1z -O3 test.cpp iprof.cpp -Wall -lpthread -o iprof_test.out
+clang++ -std=c++1z -O3 test.cpp iprof.cpp -Wall -lpthread -o builds/iprofTest.out
 ```
 
 You can use g++ instead of clang++ if you so choose.
 
-A MSVS project to build the sample is provided under the ```winbuild``` directory.
+A MSVS project to build the sample is provided under the ```winBuild``` directory.
 
 ## Contributing
 

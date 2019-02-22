@@ -1,5 +1,5 @@
 *.out
 *.user
 winBuild/.vs
-winBuild/*Debug
-winBuild/*Release
+winBuild/obj
+builds/
