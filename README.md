@@ -101,6 +101,12 @@ You can use g++ instead of clang++ if you so choose.
 
 A MSVS project to build the sample is provided under the ```winBuild``` directory.
 
+### Additional options
+
+You can disable the multithreading functionality of iprof by defining ```DISABLE_IPROF_MULTITHREAD```.
+In case your call trees are very deep you might want to disable the constant length vector optimization by defining
+```DISABLE_IPROF_OPTIM```.
+
 ## Contributing
 
 Just submit a pull request on gitlab or github
