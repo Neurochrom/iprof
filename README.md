@@ -84,7 +84,7 @@ heavyCalc/hugePower/FirstPowerLoop: 276.753 (276753 / 1000)
 heavyCalc/hugePower/BigWavePowerLoop/bigWave: 148.288 (444863 / 3000)
 ```
 
-For more guidance please see ```test.cpp```
+For more guidance please see ```test.cpp```.
 
 ## Building
 
