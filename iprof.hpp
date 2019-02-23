@@ -9,7 +9,10 @@
 #define DISABLE_IPROF_MULTITHREAD
 #endif
 
+#ifndef DISABLE_IPROF_OPTIM
+#include <stdint.h>
 #include <string.h>
+#endif
 
 #include <map>
 #ifndef DISABLE_IPROF_MULTITHREAD
