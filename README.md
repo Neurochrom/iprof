@@ -12,7 +12,7 @@ In any function you want to measure add the IPROF_FUNC macro:
 
 // ...
 
-void supectedPerformanceCulprit()
+void suspectedPerformanceCulprit()
 {
    IPROF_FUNC;
    // ...
