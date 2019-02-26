@@ -38,10 +38,10 @@ void addEntriesToAllThreadStats()
 {
    std::lock_guard<std::mutex> bouncer(allThreadStatLock);
    iprof_thread_local static Stats lastStats;
-   for (auto& s : stats)
-      allThreadStats[s.first] += s.second;
    for (auto& s : lastStats)
       allThreadStats[s.first] -= s.second;
+   for (auto& s : stats)
+      allThreadStats[s.first] += s.second;
    lastStats = stats;
 }
 #endif
