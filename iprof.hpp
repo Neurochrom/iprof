@@ -119,6 +119,12 @@ struct Stat
       numVisits += a.numVisits;
       return *this;
    }
+   Stat& operator-=(const Stat& a)
+   {
+      totalTime -= a.totalTime;
+      numVisits -= a.numVisits;
+      return *this;
+   }
 };
 
 extern iprof_thread_local Tree tree;
