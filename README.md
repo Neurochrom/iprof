@@ -49,7 +49,7 @@ iprof also handles gathering stats across many threads:
 
 ```C++
 InternalProfiler::aggregateEntries();
-InternalProfiler::addEntriesToAllThreadStats();
+InternalProfiler::addThisThreadEntriesToAllThreadStats();
 std::cout << "The latest internal profiler stats from across all threads:\n"
           << InternalProfiler::allThreadStats << std::endl;
 ```
@@ -59,7 +59,7 @@ mutex to guard the allThreadStats:
 
 ```C++
 {
-    std::std::lock_guard<std::mutex> bouncer(allThreadStatLock);
+    std::lock_guard<std::mutex> bouncer(allThreadStatLock);
     std::cout << "The latest internal profiler stats from across all threads:\n"
               << InternalProfiler::allThreadStats << std::endl;
 }

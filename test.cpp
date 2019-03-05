@@ -92,13 +92,13 @@ int main()
 #ifndef DISABLE_IPROF_MULTITHREAD
    cout << "Let's try a multithread environment" << endl;
 
-   InternalProfiler::addEntriesToAllThreadStats();
+   InternalProfiler::addThisThreadEntriesToAllThreadStats();
 
    auto load = []
    {
       heavyCalc();
       InternalProfiler::aggregateEntries();
-      InternalProfiler::addEntriesToAllThreadStats();
+      InternalProfiler::addThisThreadEntriesToAllThreadStats();
    };
 
    auto futureLucky = std::async(load);

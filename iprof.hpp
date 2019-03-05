@@ -138,7 +138,7 @@ extern Stats allThreadStats;
 #endif
 
 void aggregateEntries();
-void addEntriesToAllThreadStats();
+void addThisThreadEntriesToAllThreadStats();
 
 inline void Begin(const char* node)
 {

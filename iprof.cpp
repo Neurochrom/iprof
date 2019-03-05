@@ -34,7 +34,7 @@ void aggregateEntries()
 }
 
 #ifndef DISABLE_IPROF_MULTITHREAD
-void addEntriesToAllThreadStats()
+void addThisThreadEntriesToAllThreadStats()
 {
    std::lock_guard<std::mutex> bouncer(allThreadStatLock);
    iprof_thread_local static Stats lastStats;
