@@ -107,8 +107,12 @@ int main()
    futureLucky.get();
    futureLucky2.get();
 
-   cout << "\nThe profiler all thread stats:\n"
-        << InternalProfiler::allThreadStats << endl;
+   {
+      // In case some threads would still be adding their entries to all thread stats:
+      // std::lock_guard<std::mutex> bouncer(InternalProfiler::allThreadStatLock);
+      cout << "\nThe profiler all thread stats:\n"
+           << InternalProfiler::allThreadStats << endl;
+   }
 #else
    cout << "iprof multithread disabled\n" << endl;
 #endif

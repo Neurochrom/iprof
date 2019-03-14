@@ -59,7 +59,7 @@ mutex to guard the allThreadStats:
 
 ```C++
 {
-    std::lock_guard<std::mutex> bouncer(allThreadStatLock);
+    std::lock_guard<std::mutex> bouncer(InternalProfiler::allThreadStatLock);
     std::cout << "The latest internal profiler stats from across all threads:\n"
               << InternalProfiler::allThreadStats << std::endl;
 }
